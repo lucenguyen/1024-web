@@ -4,19 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Your description">
-    <meta name="author" content="Your name">
-
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
-
     <!-- Webpage Title -->
     <title>1024</title>
 
@@ -36,11 +23,6 @@
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
         <div class="container">
-
-            <!-- Image Logo -->
-            <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
-
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
             <a class="navbar-brand logo-text" href="index.html">1024</a>
 
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -53,19 +35,19 @@
                         <a class="nav-link  href="#header">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Người quản lí</a>
+                        <a class="nav-link">Người quản lí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Phổ biến</a>
+                        <a class="nav-link">Phổ biến</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#plans">Bình luận</a>
+                        <a class="nav-link">Bình luận</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#plans">Thư viện</a>
+                        <a class="nav-link">Thư viện</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#plans">Đăng nhập</a>
+                        <a class="nav-link">Đăng nhập</a>
                     </li>
                 </ul>
                 <span class="nav-item register-button">
@@ -113,7 +95,6 @@
             <img class="image-chuhui" src="assets/images/chuhui4.png">
         </div>
         <p class="text-center continues mb-4"><a>Xem thêm</a></p>
-        <i class="fab fa-caret-down"></i>
     </section>
 
     <section class="suggest">
@@ -417,8 +398,6 @@
                             <p class="mx-1">Terms</p>
                             <p class="mx-1">Privacy</p>
                             <p class="mx-1">Contact</p>
-                            <i class="fab fa-cc-paypal fa-lg p-1"></i>
-                            <i class="fab fa-cc-amazon-pay fa-lg p-1"></i>
                         </div>
                     </div> <!-- end of container -->
                 </div> <!-- end of bottom -->
@@ -434,58 +413,5 @@
     <script src="./js/aos.js"></script><!-- AOS on Animation Scroll -->
     <script src="./js/script.js"></script>  <!-- Custom scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            centeredSlides: true,
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-
-        var appendNumber = 4;
-        var prependNumber = 1;
-        document
-            .querySelector(".prepend-2-slides")
-            .addEventListener("click", function (e) {
-                e.preventDefault();
-                swiper.prependSlide([
-                    '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-                    '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-                ]);
-            });
-        document
-            .querySelector(".prepend-slide")
-            .addEventListener("click", function (e) {
-                e.preventDefault();
-                swiper.prependSlide(
-                    '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
-                );
-            });
-        document
-            .querySelector(".append-slide")
-            .addEventListener("click", function (e) {
-                e.preventDefault();
-                swiper.appendSlide(
-                    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
-                );
-            });
-        document
-            .querySelector(".append-2-slides")
-            .addEventListener("click", function (e) {
-                e.preventDefault();
-                swiper.appendSlide([
-                    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-                    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-                ]);
-            });
-    </script>
 </body>
 </html>

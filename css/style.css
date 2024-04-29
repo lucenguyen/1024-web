@@ -1,20 +1,3 @@
-/* Description: Master CSS file */
-
-/*****************************************
-Table Of Contents:
-- General Styles
-- Navigation
-- Home
-- Information
-- Button
-- Services
-- Plans
-- Testimonials
-- Newsletter
-- Back To Top Button
-- Extra Pages
-- Media Queries
-******************************************/
 
 
 /**************************/
@@ -61,48 +44,11 @@ li {
   	list-style-type: none;
 }
 
-/* Section Background */
-.home,
-.about,
-.services,
-.plans,
-.work,
-.contact {
-	height: 110vh;
-	position: relative;
-}
-
-.services,
-.work,
-.contact,
-.testimonial,
 .footer {
   	background-color: var(--secondary);
 	line-height: 32px;
 }
 
-
-/* Gradient Border And Background On Icons */
-/*.home_text,*/
-/*.home .fas,*/
-/*.plans .far,*/
-/*.information .fas,*/
-/*.work .fas,*/
-/*.services .fas,*/
-/*.location .far,*/
-/*.location .fas {*/
-/*	padding: 15px 0;*/
-/*	background: -webkit-gradient(*/
-/*		linear,*/
-/*		left top,*/
-/*		left bottom,*/
-/*		from(#0ee951),*/
-/*		to(#00dabf)*/
-/*	);*/
-/*	background-clip: text;*/
-/*	-webkit-background-clip: text;*/
-/*	-webkit-text-fill-color: transparent;*/
-/*}*/
 
 .navbar-nav a:hover,
 .footer a:hover,
@@ -312,6 +258,7 @@ h2, a {
 .join-with-us {
 	height: 42rem;
 	background-image: url("../assets/images/layout-late.png");
+	background-size: 90rem;
 }
 .join {
 	color: var(--secondary);
@@ -562,6 +509,17 @@ h2, a {
 	}
 	.req-comment {
 		margin: unset;
+	}
+	.button:not(:disabled) {
+		cursor: pointer;
+		margin-left: 0.5rem;
+		color: white;
+		background-color: var(--secondary);
+		border: var(--secondary);
+		border-radius: 16px;
+		width: 122px;
+		height: 48px;
+		font-size: 1.2rem;
 	}
 
 }
