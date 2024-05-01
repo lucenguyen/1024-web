@@ -44,6 +44,35 @@ li {
   	list-style-type: none;
 }
 
+.navbar-icon {
+	width: 50%;
+}
+
+.members-join {
+	background-color: white;
+	width: 40rem;
+	border-radius: 20px;
+	border: 1px solid #F9C80C;
+	margin-bottom: 2rem;
+}
+.name {
+	margin: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+.avatar-member-join {
+	width: 4rem;
+	margin: 0.5rem;
+
+}
+.title-image {
+	margin-bottom: 20px;
+}
+.role {
+	text-align: left;
+	margin-left: 0.5rem;
+}
+
 .footer {
   	background-color: var(--secondary);
 	line-height: 32px;
@@ -387,6 +416,9 @@ h2, a {
 	.ava {
 		height: 280px !important;
 	}
+	.join-mem {
+		margin-left: 10%;
+	}
 }
 
 @media (min-width: 992px) {
@@ -520,6 +552,12 @@ h2, a {
 		width: 122px;
 		height: 48px;
 		font-size: 1.2rem;
+	}
+	.card-title {
+		margin-top: 10%;
+	}
+	.members-join {
+		width: 20rem;
 	}
 
 }
