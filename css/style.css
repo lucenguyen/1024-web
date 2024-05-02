@@ -36,6 +36,10 @@ h4 {
 	padding: 0;
 }
 
+.welcome {
+	justify-content: center;
+}
+
 a {
 	color: white;
 	text-decoration: none;
@@ -416,9 +420,6 @@ h2, a {
 	}
 	.ava {
 		height: 280px !important;
-	}
-	.join-mem {
-		margin-left: 10%;
 	}
 }
 
