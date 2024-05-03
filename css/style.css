@@ -213,6 +213,10 @@ li {
 	font-size: 1.25rem;
 }
 
+.roles {
+	text-align: left;
+}
+
 .welcome-section {
 	background-image: linear-gradient(#F9C80C, #A029A1);
 	height: 921px;
@@ -386,6 +390,7 @@ h2, a {
 
 .comment {
 	background-image: url("../assets/images/comment-screen.png");
+	background-repeat: no-repeat, repeat;
 	background-size: 1440px 850px;
 }
 
