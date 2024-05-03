@@ -296,7 +296,15 @@ li {
 	width: 26rem;
 	background-color: #e9eaea;
 	border-radius: 16px;
-	margin-bottom: 120px;
+	/*margin-bottom: 120px;*/
+}
+
+.swiper-video {
+	margin-bottom: 100px;
+}
+
+.button-video {
+	margin-top: 340px !important;
 }
 
 .video {
