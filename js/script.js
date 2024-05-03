@@ -55,7 +55,7 @@ var cardSlider = new Swiper(".card-slider", {
         slidesPerView: 1,
         },
         // when window is <= 991px
-        991: {
+        1024: {
         slidesPerView: 2,
         spaceBetween: 40,
         },

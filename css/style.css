@@ -49,6 +49,15 @@ li {
   	list-style-type: none;
 }
 
+.member {
+	text-align: left;
+}
+
+.comment-card {
+	width: 21em;
+	box-shadow: 2px 2px 2px 2px gray;
+}
+
 .navbar-icon {
 	width: 50%;
 }
@@ -274,6 +283,27 @@ li {
 .image-chuhui {
 	width: 20rem;
 }
+.img-chu-hui {
+	border-top-right-radius: 16px;
+	border-top-left-radius: 16px;
+}
+
+.video-library {
+	width: 26rem;
+	background-color: #e9eaea;
+	border-radius: 16px;
+	margin-bottom: 120px;
+}
+
+.video {
+	border-radius: 16px;
+	background-color: white;
+}
+
+.player {
+	margin-top: 0.5em;
+	border-radius: 16px;
+}
 
 h2, a {
 	color: var(--secondary);
@@ -306,6 +336,11 @@ h2, a {
 	background-color: #F94816;
 	color: white;
 	margin-top: 1.4rem;
+}
+
+.member-chuhui {
+	border-radius: 16px;
+	box-shadow: 1px 1px 1px 1px #E2E8F0;
 }
 
 .swiper {
@@ -344,7 +379,9 @@ h2, a {
 }
 
 .testimonial-card {
-	margin-bottom: 40px;
+	margin-bottom: 120px;
+	background-color: white;
+	border-radius: 16px;
 }
 
 .comment {
@@ -409,7 +446,6 @@ h2, a {
 		margin-right: 815px;
 	}
 	.testimonial-card img {
-		width: 18rem;
 		margin-bottom: 70px;
 	}
 	.swiper-slide .avatar {
@@ -420,6 +456,12 @@ h2, a {
 	}
 	.ava {
 		height: 280px !important;
+	}
+	.member-chuhui {
+		width: 28rem;
+	}
+	.img-chu-hui {
+		width: 28rem;
 	}
 }
 
@@ -541,6 +583,10 @@ h2, a {
 		text-align: center;
 		align-content: center;
 	}
+
+	.comment-card {
+		margin: 20px 20px 180px 20px;
+	}
 	.req-comment {
 		margin: unset;
 	}
@@ -560,6 +606,13 @@ h2, a {
 	}
 	.members-join {
 		width: 20rem;
+	}
+	.member-chuhui {
+		width: 24rem;
+	}
+
+	.img-chu-hui {
+		width: 24rem;
 	}
 
 }
