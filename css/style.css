@@ -415,6 +415,14 @@ h2, a {
 	border-radius: unset;
 }
 
+.button-dropdown {
+	display: none;
+}
+
+.button-swiper-comment {
+	display: none;
+}
+
 .swiper-slide .avatar1 {
 	display: block;
 	width: 22rem;
@@ -626,6 +634,33 @@ h2, a {
 
 	.img-chu-hui {
 		width: 24rem;
+	}
+	.hidden {
+		display: none;
+	}
+	.button-dropdown {
+		display: block;
+	}
+	.swiper-video {
+		margin-bottom: unset;
+	}
+	.testimonial-card {
+		margin-bottom: unset;
+		margin-bottom: 15px;
+	}
+	.button-swiper-comment {
+		display: block;
+	}
+	.next-btn {
+		margin-top: 4700px;
+		margin-right: 170px;
+	}
+	.pre-btn {
+		margin-top: 4700px;
+		margin-left: 170px;
+	}
+	.title-commemt {
+		text-align: center;
 	}
 
 }
