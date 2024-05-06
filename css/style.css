@@ -447,6 +447,14 @@ h2, a {
 
 }
 
+.suggest-hidden {
+	display: none;
+	background-color: white;
+	border-radius: 16px;
+	height: 300px;
+	margin-bottom: 15px;
+}
+
 /*************************/
 /*     Media Queries     */
 /*************************/
@@ -483,6 +491,9 @@ h2, a {
 	}
 	.img-chu-hui {
 		width: 28rem;
+	}
+	.mobile-hidden {
+		display: none !important;
 	}
 }
 
@@ -661,6 +672,18 @@ h2, a {
 	}
 	.title-commemt {
 		text-align: center;
+	}
+	.mobile-hidden {
+		display: none !important;
+	}
+	.player {
+		width: 310px;
+	}
+	.video-library {
+		width: 350px;
+	}
+	.suggest-hidden {
+		display: block;
 	}
 
 }
