@@ -374,6 +374,12 @@ h2, a {
 	border-top-right-radius: 16px;
 	border-top-left-radius: 16px;
 	object-fit: fill;
+	width: 299px;
+}
+
+.set-join {
+	background-color: white;
+	width: 52vh;
 }
 
 .swiper {
