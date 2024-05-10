@@ -68,6 +68,7 @@ li {
 	border-radius: 20px;
 	border: 1px solid #F9C80C;
 	margin-bottom: 2rem;
+	/*height: 5rem !important;*/
 }
 .name {
 	margin: 0.5rem;
@@ -150,6 +151,17 @@ li {
 .offcanvas-collapse.open {
 	visibility: visible;
 	transform: translateX(-100%);
+	height: 35vh;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+}
+
+.register-button-mobile {
+	border: unset;
+	color: var(--secondary);
+	background-color: var(--primary);
+	font-size: 22px;
 }
 
 .navbar .navbar-nav {
@@ -172,6 +184,7 @@ li {
 	transition: all 0.2s ease;
 	font-size: 1.2rem;
 	font-weight: normal;
+
 }
 
 .navbar .fa-stack {
@@ -274,6 +287,10 @@ li {
 	height: 5rem;
 	margin-top: 1rem;
 }
+.oh{
+	overflow: hidden;
+	max-height: 40vh;
+}
 .money-img {
 	width: 28rem;
 	height: 30rem;
@@ -287,10 +304,7 @@ li {
 .image-chuhui {
 	width: 20rem;
 }
-.img-chu-hui {
-	border-top-right-radius: 16px;
-	border-top-left-radius: 16px;
-}
+
 
 .video-library {
 	width: 26rem;
@@ -334,7 +348,7 @@ h2, a {
 .join-with-us {
 	height: 42rem;
 	background-image: url("../assets/images/layout-late.png");
-	background-size: 90rem;
+	background-size: 100vw 100vh;
 }
 .join {
 	color: var(--secondary);
@@ -353,6 +367,13 @@ h2, a {
 .member-chuhui {
 	border-radius: 16px;
 	box-shadow: 1px 1px 1px 1px #E2E8F0;
+	margin: 10px;
+
+}
+.img-chu-hui {
+	border-top-right-radius: 16px;
+	border-top-left-radius: 16px;
+	object-fit: fill;
 }
 
 .swiper {
@@ -394,12 +415,13 @@ h2, a {
 	margin-bottom: 120px;
 	background-color: white;
 	border-radius: 16px;
+	/*width: auto;*/
 }
 
 .comment {
 	background-image: url("../assets/images/comment-screen.png");
-	background-repeat: no-repeat, repeat;
-	background-size: 1440px 850px;
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
 }
 
 .commentator {
@@ -455,9 +477,36 @@ h2, a {
 	margin-bottom: 15px;
 }
 
+input::placeholder {
+	padding-left: 20px;
+}
+
+#owners {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/*.wrapper { display: flex; justify-content: center; }*/
+/*.control { display: inline-block; transition: all 0.3s; height: 75px; overflow: hidden; margin-left: 10px; }*/
+/*!*#slider div { height: 75px; line-height: 60px;padding: 0 5px; }*!*/
+/*.animated { transition: all 0.5s; margin-top: -75px; }*/
+
 /*************************/
 /*     Media Queries     */
 /*************************/
+
+@media only screen and (max-width: 1400px) {
+	/*.member-chuhui {*/
+	/*	width: 240px;*/
+	/*	padding-right: 10px;*/
+	/*}*/
+	.members-join {
+		width: 26rem;
+	}
+}
+
+
 @media only screen and (max-width: 1024px) {
 	.money-img {
 		display: none;
@@ -494,6 +543,12 @@ h2, a {
 	}
 	.mobile-hidden {
 		display: none !important;
+	}
+	.members-join {
+		height: 8vh !important;
+	}
+	.oh {
+		max-height: 30vh !important;
 	}
 }
 
@@ -663,11 +718,11 @@ h2, a {
 		display: block;
 	}
 	.next-btn {
-		margin-top: 4700px;
+		margin-top: 1550px;
 		margin-right: 170px;
 	}
 	.pre-btn {
-		margin-top: 4700px;
+		margin-top: 1550px;
 		margin-left: 170px;
 	}
 	.title-commemt {
