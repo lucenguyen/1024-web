@@ -507,6 +507,10 @@ input::placeholder {
 	transform: none;
 }
 
+.hidden-suggest {
+	display: none;
+}
+
 /*.wrapper { display: flex; justify-content: center; }*/
 /*.control { display: inline-block; transition: all 0.3s; height: 75px; overflow: hidden; margin-left: 10px; }*/
 /*!*#slider div { height: 75px; line-height: 60px;padding: 0 5px; }*!*/
@@ -704,6 +708,10 @@ input::placeholder {
 		align-content: center;
 	}
 
+	.comment {
+		background-size: 100vw 140vh;
+	}
+
 	.comment-card {
 		margin: 20px 20px 180px 20px;
 	}
@@ -771,6 +779,9 @@ input::placeholder {
 		width: 350px;
 	}
 	.suggest-hidden {
+		display: block;
+	}
+	.hidden-suggest {
 		display: block;
 	}
 
