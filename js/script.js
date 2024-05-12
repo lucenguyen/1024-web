@@ -312,6 +312,10 @@ function getListComment() {
             disableOnInteraction: false,
         },
         loop: true,
+        zoom: {
+            maxRatio: 1.4,
+            minRation: 1
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -330,6 +334,6 @@ function getListComment() {
                 spaceBetween: 40,
             },
         },
-        
+
     });
 };
