@@ -532,19 +532,6 @@ input::placeholder {
 /*     Media Queries     */
 /*************************/
 
-@media only screen and (max-width: 1400px) {
-	.member-chuhui {
-		width: 100%;
-	}
-	.img-chu-hui {
-		width: 100% !important;
-	}
-	.members-join {
-		width: 26rem;
-	}
-}
-
-
 @media only screen and (max-width: 1024px) {
 	.comment {
 		background-image: url("../assets/images/comment-backgrond-ipad.png") !important;
@@ -607,7 +594,66 @@ input::placeholder {
 	}
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-device-width: 430px) and (max-device-width: 1024px) {
+	.comment {
+		background-image: url("../assets/images/comment-backgrond-ipad.png") !important;
+	}
+	.comment-card {
+		width: 21em;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+		border: 1px solid #E2E8F0;
+		transform: scale(0.95);
+		transition: transform .2s;
+	}
+
+	.swiper-slide-active .comment-card {
+		background-color: #A029A1;
+		color: white;
+		transform: none;
+	}
+	.money-img {
+		display: none;
+	}
+	.member-image {
+		width: 40rem;
+	}
+	.image-chuhui {
+		width: 25rem;
+	}
+	.swiper-button-prev {
+		margin-left: 30px;
+	}
+	.swiper-button-next {
+		margin-right: 815px;
+	}
+	.testimonial-card img {
+		margin-bottom: 70px;
+	}
+	.swiper-slide .avatar {
+		width: 16rem;
+	}
+	.swiper-slide .avatar1 {
+		width: 16rem;
+	}
+	.ava {
+		height: 280px !important;
+	}
+	.member-chuhui {
+		width: 28rem;
+	}
+	.img-chu-hui {
+		width: 28rem;
+	}
+	.mobile-hidden {
+		display: none !important;
+	}
+	.members-join {
+		height: 8vh !important;
+		width: 50vh;
+	}
+	.oh {
+		max-height: 30vh !important;
+	}
 	.slider-1 .swiper-container {
 		width: 92%;
 	}
@@ -693,17 +739,17 @@ input::placeholder {
 	}
 }
 
-@media (max-width: 992px) {
-	.member-chuhui {
-		width: 32vw;
-	}
-	.img-chu-hui {
-		width: 100% !important;
-	}
+/*@media (max-width: 992px) {*/
+/*	.member-chuhui {*/
+/*		width: 32vw;*/
+/*	}*/
+/*	.img-chu-hui {*/
+/*		width: 100% !important;*/
+/*	}*/
 
-}
+/*}*/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 430px) {
 	.join-with-us {
 		background-image: url("../assets/images/tham-gia-mobile.png") !important;
 	}
