@@ -174,7 +174,7 @@ function getListOwners() {
     var list = document.getElementById('owners')
 
     for (let item of listOfOwners1) {
-        var div = `<div class="col-xxl-3 col-md-6 col-sm-12"><div class="member-chuhui justify-content-lg-start">
+        var div = `<div class="col-xxl-3 col-md-6 col-sm-12 ownerr"><div class="member-chuhui">
                             <img  class="img-chu-hui" src="${item.image1}">
                             <div class="d-flex">
                             <div style="border-radius: 25%">

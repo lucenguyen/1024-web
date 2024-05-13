@@ -154,7 +154,7 @@ li {
 	height: 35vh;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
-
+	text-align: right;
 }
 
 .register-button-mobile {
@@ -177,13 +177,13 @@ li {
 }
 
 .navbar .nav-item .nav-link {
-	color: black;
+	color: #0F172A;
 	text-decoration: none;
 	padding-top: 0.625rem;
 	padding-bottom: 0.625rem;
 	transition: all 0.2s ease;
 	font-size: 1.2rem;
-	font-weight: normal;
+	font-weight: 500;
 
 }
 
@@ -451,6 +451,18 @@ h2, a {
 	display: none;
 }
 
+.ownerr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list-owners {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .swiper-slide .avatar1 {
 	display: block;
 	width: 22rem;
@@ -490,7 +502,7 @@ input::placeholder {
 #owners {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .comment-card {
@@ -532,6 +544,12 @@ input::placeholder {
 
 
 @media only screen and (max-width: 1024px) {
+	.comment {
+		background-image: url("../assets/images/comment-backgrond-ipad.png") !important;
+	}
+	.ownerr {
+
+	}
 	.comment-card {
 		width: 21em;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
@@ -676,6 +694,12 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 540px) {
+	.join-with-us {
+		background-image: url("../assets/images/tham-gia-mobile.png") !important;
+	}
+	.navbar .nav-item .nav-link {
+		height: 46px;
+	}
 	.member-image {
 		width: 20rem;
 	}
