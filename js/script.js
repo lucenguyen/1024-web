@@ -53,7 +53,7 @@ var cardSlider = new Swiper(".card-slider", {
     breakpoints: {
         // when window is <= 767px
         767: {
-        slidesPerView: 1,
+        slidesPerView: 3,
         },
         // when window is <= 991px
         1024: {
@@ -61,24 +61,24 @@ var cardSlider = new Swiper(".card-slider", {
         spaceBetween: 40,
         },
     },
-    // on: {
-    //     resize: function () {
-    //         cardSlider.changeDirection(getDirection());
-    //     },
-    // },
+    on: {
+        resize: function () {
+            cardSlider.changeDirection(getDirection());
+        },
+    },
 });
-// function getDirection() {
-//     var windowWidth = window.innerWidth;
-//     var direction = window.innerWidth <= 767 ? 'vertical' : 'horizontal';
-//
-//     return direction;
-// }
+function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = windowWidth <= 767 ? 'vertical' : 'horizontal';
+
+    return direction;
+}
 
 var cardSlider1 = new Swiper(".swiper-join-member", {
     direction: 'vertical',
     effect: 'slide',
     slidesPerView: 3,
-    spaceBetween: 70,
+    spaceBetween: 0,
     loop: true,
     autoplay: {
         delay: 2000,
@@ -167,7 +167,7 @@ let listComment = [
 
 getListOwners(listOfOwners1);
 getListSuggest(listSuggest);
-getListJoiMember(listJoinMember);
+getListJoinMember(listJoinMember);
 getListComment(listComment);
 
 function getListOwners() {
@@ -247,11 +247,11 @@ function getListSuggest() {
     }
 }
 
-function getListJoiMember() {
+function getListJoinMember() {
     var list = document.getElementById('join')
 
     for (let item of listJoinMember) {
-        var div = `<div style="margin-bottom: 0 !important;" class="members-join d-flex col-xxl-6 swiper-slide">
+        var div = `<div class="members-join d-flex col-xxl-6 swiper-slide">
                                 <img class="avatar-member-join" src="${item.img}">
                                 <div>
                                     <p class="name text-bold">${item.name}</p>
@@ -264,7 +264,7 @@ function getListJoiMember() {
         direction: 'vertical',
         effect: 'slide',
         slidesPerView: 3,
-        spaceBetween: 70,
+        spaceBetween: 0,
         loop: true,
         autoplay: {
             delay: 2000,
@@ -272,8 +272,8 @@ function getListJoiMember() {
             disableOnInteraction: false,
         },
         breakpoints: {
-            1024: {
-                slidesPerView: 2,
+            540: {
+                slidesPerView: 3,
             },
         },
     })
