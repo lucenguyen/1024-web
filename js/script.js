@@ -11,12 +11,12 @@ function scrollFunction() {
 	let intViewportWidth = window.innerWidth;
 	if (
 		document.body.scrollTop > 30 ||
-		(document.documentElement.scrollTop > 30) & (intViewportWidth > 991)
+		(document.documentElement.scrollTop > 30) & (intViewportWidth > 1024)
 	) {
 		document.getElementById("navbar").classList.add("top-nav-collapse");
 	} else if (
 		document.body.scrollTop < 30 ||
-		(document.documentElement.scrollTop < 30) & (intViewportWidth > 991)
+		(document.documentElement.scrollTop < 30) & (intViewportWidth > 1024)
 	) {
 		document.getElementById("navbar").classList.remove("top-nav-collapse");
 	}
@@ -174,17 +174,22 @@ function getListOwners() {
     var list = document.getElementById('owners')
 
     for (let item of listOfOwners1) {
-        var div = `<div class="col-xxl-3 col-xl-6 col-lg-3 col-md-6  col-sm-12 ownerr"><div class="member-chuhui">
+        var div = `<div class="col-xl-3 col-md-6 col-sm-12 gap-1  ownerr"><div class="member-chuhui">
                             <img  class="img-chu-hui" src="${item.image1}">
                             <div class="d-flex">
                             <div style="border-radius: 25%">
                                 <img class="m-2" src="${item.avatar}">
                             </div>
 
-                                <div >
-                                    <p style="font-size: 1.8vh" id="name" class="m-2 text-bold">${item.name1}</p>
-                                    <p style="font-size: 1.5vh" id="role" class="m-2 roles">${item.role1}</p>
+                                <div class="name-chu-hui">
+                                 <p style="font-size: 1.8vh" id="name" class="m-2 text-bold">${item.name1}</p>
+                                <div>
+                                
                                 </div>
+                                <p style="font-size: 1.5vh" id="role" class="m-2 roles">${item.role1}</p>
+                                <div>
+          
+                                 </div>
                             </div>
                         </div></div>`
         list.innerHTML += div
