@@ -81,7 +81,7 @@ var cardSlider1 = new Swiper(".swiper-join-member", {
     spaceBetween: 0,
     loop: true,
     autoplay: {
-        delay: 2000,
+        delay: Math.random() * 25000 + 5000,
         reverseDirection: true,
         disableOnInteraction: false,
     },
