@@ -182,11 +182,11 @@ function getListOwners() {
                             </div>
 
                                 <div class="name-chu-hui">
-                                 <p style="font-size: 1.8vh" id="name" class="m-2 text-bold">${item.name1}</p>
+                                 <p style="font-size: 1.5vh" id="name" class="m-2 text-bold">${item.name1}</p>
                                 <div>
                                 
                                 </div>
-                                <p style="font-size: 1.5vh" id="role" class="m-2 roles">${item.role1}</p>
+                                <p style="font-size: 1.5vh; padding-left: 20px" id="role" class="m-2 roles">${item.role1}</p>
                                 <div>
           
                                  </div>
