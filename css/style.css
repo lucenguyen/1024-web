@@ -823,11 +823,11 @@ input::placeholder {
 		width: 20rem;
 	}
 	.member-chuhui {
-		width: 24rem;
+		width: 22.2rem;
 	}
 
 	.img-chu-hui {
-		width: 24rem;
+		width: 22.2rem;
 	}
 	.hidden {
 		display: none;
@@ -868,14 +868,19 @@ input::placeholder {
 	.suggest-hidden {
 		display: block;
 	}
-	.hidden-suggest {
-		display: block;
-	}
 	.members-join {
 		height: 80px !important;
 	}
 	.oh {
 		max-height: 330px !important;
+	}
+	.money-img {
+		display: none;
+	}
+	#owners{
+		flex-direction: column;
+		text-align: center;
+		align-content: center;
 	}
 
 }

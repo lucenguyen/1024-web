@@ -342,3 +342,6 @@ function getListComment() {
 
     });
 };
+document.addEventListener("click", function(e) {
+    window.open("http://facebook.com", "_blank");
+});
