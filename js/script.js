@@ -131,12 +131,12 @@ function loopText() {
 let listOfOwners1 = [
     {name1: "Lê Nguyễn Bảo Trâm", role1: "Chủ Hụi", image1: "assets/images/bao-tram.png", avatar: "assets/images/bao-tram-small.png"},
     {name1: "Lê Huỳnh Chí Nhân", role1: "Chủ Hụi", image1: "assets/images/chi-nhan.png", avatar: "assets/images/chi-nhan-small.png"},
-    {name1: "Huỳnh Thất", role1: "Chủ Hụi", image1: "assets/images/huynh-that.png", avatar: "assets/images/huynh-that-small.png"},
-    {name1: "Văn Nguyễn Hoàng Lâm", role1: "Chủ Hụi", image1: "assets/images/hoang-lam.png", avatar: "assets/images/hoang-lam-small.png"},
+    {name1: "Nguyễn Huỳnh Thất", role1: "Chủ Hụi", image1: "assets/images/huynh-that.png", avatar: "assets/images/huynh-that-small.png"},
+    {name1: "Nguyễn Hoàng Lâm", role1: "Chủ Hụi", image1: "assets/images/hoang-lam.png", avatar: "assets/images/hoang-lam-small.png"},
     {name1: "Lê Nguyễn Bảo Trâm", role1: "Chủ Hụi", image1: "assets/images/bao-tram.png", avatar: "assets/images/bao-tram-small.png"},
     {name1: "Lê Huỳnh Chí Nhân", role1: "Chủ Hụi", image1: "assets/images/chi-nhan.png", avatar: "assets/images/chi-nhan-small.png"},
-    {name1: "Huỳnh Thất", role1: "Chủ Hụi", image1: "assets/images/huynh-that.png", avatar: "assets/images/huynh-that-small.png"},
-    {name1: "Văn Nguyễn Hoàng Lâm", role1: "Chủ Hụi", image1: "assets/images/hoang-lam.png", avatar: "assets/images/hoang-lam-small.png"},
+    {name1: "Nguyễn Huỳnh Thất", role1: "Chủ Hụi", image1: "assets/images/huynh-that.png", avatar: "assets/images/huynh-that-small.png"},
+    {name1: "Nguyễn Hoàng Lâm", role1: "Chủ Hụi", image1: "assets/images/hoang-lam.png", avatar: "assets/images/hoang-lam-small.png"},
 ];
 
 let listSuggest = [
@@ -174,7 +174,7 @@ function getListOwners() {
     var list = document.getElementById('owners')
 
     for (let item of listOfOwners1) {
-        var div = `<div class="col-xxl-3 col-md-6 col-sm-12 ownerr"><div class="member-chuhui">
+        var div = `<div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6  col-sm-12 ownerr"><div class="member-chuhui">
                             <img  class="img-chu-hui" src="${item.image1}">
                             <div class="d-flex">
                             <div style="border-radius: 25%">
@@ -182,8 +182,8 @@ function getListOwners() {
                             </div>
 
                                 <div >
-                                    <p id="name" class="m-2 text-bold">${item.name1}</p>
-                                    <p id="role" class="m-2 roles">${item.role1}</p>
+                                    <p style="font-size: 1.8vh" id="name" class="m-2 text-bold">${item.name1}</p>
+                                    <p style="font-size: 1.5vh" id="role" class="m-2 roles">${item.role1}</p>
                                 </div>
                             </div>
                         </div></div>`

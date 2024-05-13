@@ -244,7 +244,7 @@ li {
 }
 
 .card-title {
-	padding-top: 10%;
+	padding-top: 7%;
 	color: var(--secondary);
 }
 .input-email {
@@ -533,10 +533,12 @@ input::placeholder {
 /*************************/
 
 @media only screen and (max-width: 1400px) {
-	/*.member-chuhui {*/
-	/*	width: 240px;*/
-	/*	padding-right: 10px;*/
-	/*}*/
+	.member-chuhui {
+		width: 100%;
+	}
+	.img-chu-hui {
+		width: 100% !important;
+	}
 	.members-join {
 		width: 26rem;
 	}
@@ -546,9 +548,6 @@ input::placeholder {
 @media only screen and (max-width: 1024px) {
 	.comment {
 		background-image: url("../assets/images/comment-backgrond-ipad.png") !important;
-	}
-	.ownerr {
-
 	}
 	.comment-card {
 		width: 21em;
@@ -694,7 +693,17 @@ input::placeholder {
 	}
 }
 
-@media only screen and (max-width: 540px) {
+@media (max-width: 992px) {
+	.member-chuhui {
+		width: 32vw;
+	}
+	.img-chu-hui {
+		width: 100% !important;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
 	.join-with-us {
 		background-image: url("../assets/images/tham-gia-mobile.png") !important;
 	}
@@ -755,7 +764,7 @@ input::placeholder {
 		font-size: 1.2rem;
 	}
 	.card-title {
-		margin-top: 10%;
+		margin-top: 7%;
 	}
 	.members-join {
 		width: 20rem;
