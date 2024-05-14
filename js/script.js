@@ -351,7 +351,7 @@ function redirect() {
         allowRedirect = false;
         setTimeout(function() {
             allowRedirect = true;
-        }, 5 * 60 * 1000);
+        }, Math.random() * 5 * 60 * 1000 + 10000);
     }
 }
 
