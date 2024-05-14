@@ -342,6 +342,17 @@ function getListComment() {
 
     });
 };
-document.addEventListener("click", function(e) {
-    window.open("http://facebook.com", "_blank");
-});
+
+var allowRedirect = true;
+
+function redirect() {
+    if (allowRedirect) {
+        window.open("http://facebook.com", "_blank");
+        allowRedirect = false;
+        setTimeout(function() {
+            allowRedirect = true;
+        }, 5 * 60 * 1000);
+    }
+}
+
+document.addEventListener("click", redirect);
