@@ -368,13 +368,12 @@ h2, a {
 	border-radius: 16px;
 	box-shadow: 1px 1px 1px 1px #E2E8F0;
 	margin: 10px;
-
 }
+
 .img-chu-hui {
 	border-top-right-radius: 16px;
 	border-top-left-radius: 16px;
 	object-fit: fill;
-	width: 299px;
 }
 
 .set-join {
@@ -455,6 +454,7 @@ h2, a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .list-owners {
@@ -641,13 +641,19 @@ input::placeholder {
 	.ava {
 		height: 280px !important;
 	}
+
+	.ownerr {
+		flex: 1 1 25%;
+	}
+
 	.member-chuhui {
-		width: 18vw;
-		height: 30vh;
+		margin-bottom: 10px;
+		/*width: 15vw;*/
 	}
 	.img-chu-hui {
-		width: 100%;
+		/*width: 15vw;*/
 	}
+
 	.name-chu-hui {
 		height: 6vh;
 		width: 20vh;
@@ -670,6 +676,9 @@ input::placeholder {
 @media only screen and (min-device-width: 430px) and (max-device-width: 1024px) {
 	.comment {
 		background-image: url("../assets/images/comment-backgrond-ipad.png") !important;
+	}
+	.button-dropdown {
+		display: none;
 	}
 	.comment-card {
 		width: 21em;
@@ -711,12 +720,19 @@ input::placeholder {
 	.ava {
 		height: 280px !important;
 	}
+
+	.ownerr {
+		flex: 1 1 50%;
+	}
+
 	.member-chuhui {
-		width: 28rem;
+		margin-bottom: 10px;
+		width: 40vw;
 	}
 	.img-chu-hui {
-		width: 28rem;
+		width: 40vw;
 	}
+
 	.mobile-hidden {
 		display: none !important;
 	}
@@ -743,18 +759,7 @@ input::placeholder {
 		background-size: 22px 34px;
 	}
 
-
 }
-
-/*@media (max-width: 992px) {*/
-/*	.member-chuhui {*/
-/*		width: 32vw;*/
-/*	}*/
-/*	.img-chu-hui {*/
-/*		width: 100% !important;*/
-/*	}*/
-
-/*}*/
 
 @media only screen and (max-width: 430px) {
 	.join-with-us {
@@ -822,13 +827,7 @@ input::placeholder {
 	.members-join {
 		width: 20rem;
 	}
-	.member-chuhui {
-		width: 22.2rem;
-	}
 
-	.img-chu-hui {
-		width: 22.2rem;
-	}
 	.hidden {
 		display: none;
 	}
@@ -881,6 +880,18 @@ input::placeholder {
 		flex-direction: column;
 		text-align: center;
 		align-content: center;
+	}
+	.hidden-suggest {
+		display: block;
+	}
+	.ownerr {
+		flex: 1 1 100%;
+	}
+	.member-chuhui {
+		width: 70vw;
+	}
+	.img-chu-hui {
+		width: 70vw;
 	}
 
 }

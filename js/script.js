@@ -174,7 +174,7 @@ function getListOwners() {
     var list = document.getElementById('owners')
 
     for (let item of listOfOwners1) {
-        var div = `<div class="col-xl-3 col-md-6 col-sm-12 gap-1  ownerr"><div class="member-chuhui">
+        var div = `<div class=" ownerr"><div class="member-chuhui">
                             <img  class="img-chu-hui" src="${item.image1}">
                             <div class="d-flex">
                             <div style="border-radius: 25%">
@@ -212,7 +212,9 @@ function getListSuggest() {
                                         </div>
 
                                         <div class="d-flex">
+                                        <div style="border-radius: 25%">
                                             <img class="m-2" src="${item.img}">
+                                        </div>
                                             <div>
                                                 <p class="m-2 text-bold">${item.name}</p>
                                                 <p class="m-2">${item.role}</p>
