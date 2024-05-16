@@ -151,7 +151,7 @@ li {
 .offcanvas-collapse.open {
 	visibility: visible;
 	transform: translateX(-100%);
-	height: 35vh;
+	height: 50vh;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	text-align: right;
@@ -523,6 +523,13 @@ input::placeholder {
 	display: none;
 }
 
+.box-shadown {
+	box-shadow: 2px 2px 2px 2px gray;
+	border-radius: 16px;
+	background-color: white;
+}
+
+
 /*.wrapper { display: flex; justify-content: center; }*/
 /*.control { display: inline-block; transition: all 0.3s; height: 75px; overflow: hidden; margin-left: 10px; }*/
 /*!*#slider div { height: 75px; line-height: 60px;padding: 0 5px; }*!*/
@@ -536,7 +543,7 @@ input::placeholder {
 	/* Navigation */
 	.navbar {
 		box-shadow: none;
-		transition: all 0.2s;
+		transition: top 0.2s;
 		padding-top: 1.75rem;
 		background-color: transparent;
 	}
@@ -801,6 +808,7 @@ input::placeholder {
 	}
 
 	.comment {
+		background-image: url("../assets/images/comment-background-iphone.png") !important;
 		background-size: 100vw 140vh;
 	}
 
@@ -894,4 +902,9 @@ input::placeholder {
 		width: 70vw;
 	}
 
+	.nav-item:hover,
+	.nav-item.focused {
+		background-color: #fff;
+		opacity: 0.5;
+	}
 }

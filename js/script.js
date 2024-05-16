@@ -22,6 +22,23 @@ function scrollFunction() {
 	}
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const listItems = document.querySelectorAll(".navbar-nav");
+
+    listItems.forEach(function(item) {
+        item.addEventListener("click", function(event) {
+            const focusedElement = document.querySelector(".focused");
+            if (focusedElement) {
+                focusedElement.classList.remove("focused");
+            }
+            event.target.classList.add("focused");
+        });
+    });
+
+    const firstItem = document.querySelector(".nav-item");
+    firstItem.classList.add("focused");
+    firstItem.focus();
+});
 // NAVBAR ON MOBILE
 let elements = document.querySelectorAll(".nav-link:not(.dropdown-toggle)");
 
@@ -275,7 +292,7 @@ function getListJoinMember() {
         loop: true,
         on: {
             slideChangeTransitionEnd: function () {
-                const randomDelay = Math.floor(Math.random() * 3000) + 2000;
+                const randomDelay = Math.floor(Math.random() * 3000) + 5000;
                 setTimeout(() => {
                     const totalSlides = this.slides.length;
                     const randomIndex = Math.floor(Math.random() * totalSlides);
