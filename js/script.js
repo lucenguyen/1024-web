@@ -273,6 +273,16 @@ function getListJoinMember() {
         slidesPerView: 3,
         spaceBetween: 0,
         loop: true,
+        on: {
+            slideChangeTransitionEnd: function () {
+                const randomDelay = Math.floor(Math.random() * 3000) + 2000;
+                setTimeout(() => {
+                    const totalSlides = this.slides.length;
+                    const randomIndex = Math.floor(Math.random() * totalSlides);
+                    this.slideTo(randomIndex);
+                }, randomDelay);
+            }
+        },
         autoplay: {
             delay: 2000,
             reverseDirection: true,
