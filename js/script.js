@@ -4,19 +4,19 @@
 // COLLAPSE THE NAVBAR BY ADDING THE TOP-NAV-COLLAPSE CLASS
 window.onscroll = function () {
 	scrollFunction();
-	scrollFunctionBTT(); // back to top button
+	// scrollFunctionBTT(); // back to top button
 };
 
 function scrollFunction() {
 	let intViewportWidth = window.innerWidth;
 	if (
 		document.body.scrollTop > 30 ||
-		(document.documentElement.scrollTop > 30) & (intViewportWidth > 1024)
+        (document.documentElement.scrollTop > 30) & (intViewportWidth >= 1024)
 	) {
 		document.getElementById("navbar").classList.add("top-nav-collapse");
 	} else if (
 		document.body.scrollTop < 30 ||
-		(document.documentElement.scrollTop < 30) & (intViewportWidth > 1024)
+        (document.documentElement.scrollTop < 30) & (intViewportWidth >= 1024)
 	) {
 		document.getElementById("navbar").classList.remove("top-nav-collapse");
 	}
@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     firstItem.classList.add("focused");
     firstItem.focus();
 });
+
 // NAVBAR ON MOBILE
 let elements = document.querySelectorAll(".nav-link:not(.dropdown-toggle)");
 
@@ -70,19 +71,19 @@ var cardSlider = new Swiper(".card-slider", {
     breakpoints: {
         // when window is <= 767px
         767: {
-        slidesPerView: 3,
+            slidesPerView: 3,
         },
         // when window is <= 991px
         1024: {
-        slidesPerView: 2,
-        spaceBetween: 40,
+            slidesPerView: 2,
+            spaceBetween: 40,
         },
     },
-    on: {
-        resize: function () {
-            cardSlider.changeDirection(getDirection());
-        },
-    },
+    // on: {
+    //     resize: function () {
+    //         cardSlider.changeDirection(getDirection());
+    //     },
+    // },
 });
 function getDirection() {
     var windowWidth = window.innerWidth;
@@ -114,13 +115,13 @@ var cardSlider1 = new Swiper(".swiper-join-member", {
 myButton = document.getElementById("myBtn");
 
 // WHEN THE USER SCROLLS DOWN 20PX FROM THE TOP OF THE DOCUMENT, SHOW THE BUTTON
-function scrollFunctionBTT() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        myButton.style.display = "block";
-    } else {
-        myButton.style.display = "none";
-    }
-}
+// function scrollFunctionBTT() {
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//         myButton.style.display = "block";
+//     } else {
+//         myButton.style.display = "none";
+//     }
+// }
 
 // AOS ANIMATION ON SCROLL
 AOS.init({
@@ -134,25 +135,60 @@ const wrapElement = document.querySelector('#slider')
 setInterval(slidingText, 3000)
 
 function slidingText() {
-    wrapElement.classList.add('animated')
-    setTimeout(loopText, 500)
+    // wrapElement.classList.add('animated')
+    // setTimeout(loopText, 500)
 }
 
-function loopText() {
-    const firstElement = document.querySelector('#slider div')
-    wrapElement.appendChild(firstElement)
-    wrapElement.classList.remove('animated')
-}
+// function loopText() {
+//     const firstElement = document.querySelector('#slider div')
+//     wrapElement.appendChild(firstElement)
+//     wrapElement.classList.remove('animated')
+// }
 
 
 let listOfOwners1 = [
-    {name1: "Lê Nguyễn Bảo Trâm", role1: "Chủ Hụi", image1: "assets/images/bao-tram.png", avatar: "assets/images/bao-tram-small.png"},
-    {name1: "Lê Huỳnh Chí Nhân", role1: "Chủ Hụi", image1: "assets/images/chi-nhan.png", avatar: "assets/images/chi-nhan-small.png"},
-    {name1: "Nguyễn Huỳnh Thất", role1: "Chủ Hụi", image1: "assets/images/huynh-that.png", avatar: "assets/images/huynh-that-small.png"},
-    {name1: "Nguyễn Hoàng Lâm", role1: "Chủ Hụi", image1: "assets/images/hoang-lam.png", avatar: "assets/images/hoang-lam-small.png"},
-    {name1: "Lê Nguyễn Bảo Trâm", role1: "Chủ Hụi", image1: "assets/images/bao-tram.png", avatar: "assets/images/bao-tram-small.png"},
-    {name1: "Lê Huỳnh Chí Nhân", role1: "Chủ Hụi", image1: "assets/images/chi-nhan.png", avatar: "assets/images/chi-nhan-small.png"},
-    {name1: "Nguyễn Huỳnh Thất", role1: "Chủ Hụi", image1: "assets/images/huynh-that.png", avatar: "assets/images/huynh-that-small.png"},
+    {
+        name1: "Lê Nguyễn Bảo Trâm",
+        role1: "Chủ Hụi",
+        image1: "assets/images/bao-tram.png",
+        avatar: "assets/images/bao-tram-small.png"
+    },
+    {
+        name1: "Lê Huỳnh Chí Nhân",
+        role1: "Chủ Hụi",
+        image1: "assets/images/chi-nhan.png",
+        avatar: "assets/images/chi-nhan-small.png"
+    },
+    {
+        name1: "Nguyễn Huỳnh Thất",
+        role1: "Chủ Hụi",
+        image1: "assets/images/huynh-that.png",
+        avatar: "assets/images/huynh-that-small.png"
+    },
+    {
+        name1: "Nguyễn Hoàng Lâm",
+        role1: "Chủ Hụi",
+        image1: "assets/images/hoang-lam.png",
+        avatar: "assets/images/hoang-lam-small.png"
+    },
+    {
+        name1: "Lê Nguyễn Bảo Trâm",
+        role1: "Chủ Hụi",
+        image1: "assets/images/bao-tram.png",
+        avatar: "assets/images/bao-tram-small.png"
+    },
+    {
+        name1: "Lê Huỳnh Chí Nhân",
+        role1: "Chủ Hụi",
+        image1: "assets/images/chi-nhan.png",
+        avatar: "assets/images/chi-nhan-small.png"
+    },
+    {
+        name1: "Nguyễn Huỳnh Thất",
+        role1: "Chủ Hụi",
+        image1: "assets/images/huynh-that.png",
+        avatar: "assets/images/huynh-that-small.png"
+    },
     {name1: "Nguyễn Hoàng Lâm", role1: "Chủ Hụi", image1: "assets/images/hoang-lam.png", avatar: "assets/images/hoang-lam-small.png"},
 ];
 
@@ -218,8 +254,8 @@ function getListSuggest() {
 
     for (let item of listSuggest) {
         var div = `<div class="swiper-slide">
-                            <div class="container testimonial-card pb-5 ">
-                                <div  class="member d-flex pt-4 ">
+                            <div style="padding: 32px" class="container testimonial-card ">
+                                <div  class="member d-flex">
                                     <div class="justify-content-lg-start">
                                         <div class="m-3" >
                                             <p>${item.line1}</p>

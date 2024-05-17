@@ -104,6 +104,10 @@ li {
 	-webkit-text-fill-color: transparent;
 }
 
+.hidden-tablet {
+	display: none;
+}
+
 
 /**********************/
 /*     Navigation     */
@@ -668,13 +672,16 @@ input::placeholder {
 	#name {
 		font-size: 0.6vh;
 	}
+
 	.mobile-hidden {
 		display: none !important;
 	}
+
 	.members-join {
 		height: 8vh !important;
 		width: 50vh;
 	}
+
 	.oh {
 		max-height: 33vh !important;
 	}
@@ -684,9 +691,11 @@ input::placeholder {
 	.comment {
 		background-image: url("../assets/images/comment-backgrond-ipad.png") !important;
 	}
+
 	.button-dropdown {
 		display: none;
 	}
+
 	.comment-card {
 		width: 21em;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
@@ -898,6 +907,7 @@ input::placeholder {
 	.member-chuhui {
 		width: 70vw;
 	}
+
 	.img-chu-hui {
 		width: 70vw;
 	}
@@ -906,5 +916,23 @@ input::placeholder {
 	.nav-item.focused {
 		background-color: #fff;
 		opacity: 0.5;
+	}
+
+	.offcanvas-collapse {
+		padding-right: unset;
+		padding-left: unset;
+	}
+
+	.nav-item {
+		padding-right: 16px;
+		justify-content: center;
+	}
+
+	.focused {
+		box-shadow: 2px 2px 2px 2px gray;
+	}
+
+	.hidden-tablet {
+		display: block;
 	}
 }
