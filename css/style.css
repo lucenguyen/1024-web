@@ -8,6 +8,32 @@
 	--secondary: #A029A1;
 	--tertiary: #00CFED;
 	--gradient: linear-gradient(to bottom, #F9C80C, #A029A1);
+
+@media (min-width: 1025px) {
+	.navbar-expand-lg .navbar-toggler {
+		display: none;
+	}
+
+	.navbar-expand-lg .navbar-collapse {
+		display: none !important;
+		flex-basis: auto;
+	}
+}
+
+@media (max-width: 1024px) {
+	.navbar-expand-lg .navbar-toggler {
+		display: unset;
+	}
+
+	.navbar-expand-lg .navbar-collapse {
+		/*display: flex !important;*/
+		flex-basis: auto;
+	}
+
+	#navbarsExampleDefault {
+		display: none !important;
+	}
+}
 }
 
 h1,
@@ -547,7 +573,7 @@ input::placeholder {
 	/* Navigation */
 	.navbar {
 		box-shadow: none;
-		transition: top 0.2s;
+		transition: all 0.2s;
 		padding-top: 1.75rem;
 		background-color: transparent;
 	}
@@ -557,23 +583,6 @@ input::placeholder {
 		padding-bottom: 1rem;
 		background-color: var(--primary);
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
-	}
-
-	.offcanvas-collapse {
-		position: static;
-		top: auto;
-		bottom: auto;
-		left: auto;
-		width: auto;
-		padding-right: 0;
-		padding-left: 0;
-		background-color: transparent;
-		overflow-y: visible;
-		visibility: visible;
-	}
-
-	.offcanvas-collapse.open {
-		transform: none;
 	}
 
 	.navbar .navbar-nav {
@@ -687,7 +696,53 @@ input::placeholder {
 	}
 }
 
-@media only screen and (min-device-width: 430px) and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 431px) and (max-device-width: 1024px) {
+	.navbar .navbar-nav {
+		flex-direction: column;
+
+	}
+	.navbar-expand-lg .navbar-collapse {
+		margin-top: 12px;
+	}
+	.navbar .register-button button {
+		background-color: unset;
+		color: var(--secondary);
+	}
+
+	.nav-item {
+		margin: 14px 0 14px 0;
+		text-align: center;
+	}
+
+	.open {
+		height: 35vh !important;
+	}
+
+	.navbar-expand-lg .navbar-collapse {
+		flex-direction: column;
+	}
+	.nav-item {
+		justify-content: center;
+	}
+
+	.focused {
+		box-shadow: 2px 2px 2px 2px gray;
+	}
+	.nav-item:hover,
+	.nav-item.focused {
+		background-color: #fff;
+		opacity: 0.5;
+	}
+
+	ul.navbar-nav.ms-auto.navbar-nav-scroll {
+		margin: unset !important;
+		width: 100%;
+	}
+	.offcanvas-collapse {
+		padding-right: unset;
+		padding-left: unset;
+	}
+
 	.comment {
 		background-image: url("../assets/images/comment-backgrond-ipad.png") !important;
 	}

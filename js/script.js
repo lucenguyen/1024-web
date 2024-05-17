@@ -49,8 +49,8 @@ for (let i = 0; i < elements.length; i++) {
     });
 }
 
-document.querySelector(".navbar-toggler").addEventListener("click", () => {
-  document.querySelector(".offcanvas-collapse").classList.toggle("open");
+document.querySelector("#navbarSideCollapse").addEventListener("click", () => {
+    document.querySelector("#navbarsExampleDefaultForMobile").classList.toggle("open");
 });
 
 
