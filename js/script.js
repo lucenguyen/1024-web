@@ -146,71 +146,27 @@ function slidingText() {
 // }
 
 
-let listOfOwners1 = [
-    {
-        name1: "Lê Nguyễn Bảo Trâm",
-        role1: "Chủ Hụi",
-        image1: "assets/images/bao-tram.png",
-        avatar: "assets/images/bao-tram-small.png"
-    },
-    {
-        name1: "Lê Huỳnh Chí Nhân",
-        role1: "Chủ Hụi",
-        image1: "assets/images/chi-nhan.png",
-        avatar: "assets/images/chi-nhan-small.png"
-    },
-    {
-        name1: "Nguyễn Huỳnh Thất",
-        role1: "Chủ Hụi",
-        image1: "assets/images/huynh-that.png",
-        avatar: "assets/images/huynh-that-small.png"
-    },
-    {
-        name1: "Nguyễn Hoàng Lâm",
-        role1: "Chủ Hụi",
-        image1: "assets/images/hoang-lam.png",
-        avatar: "assets/images/hoang-lam-small.png"
-    },
-    {
-        name1: "Lê Nguyễn Bảo Trâm",
-        role1: "Chủ Hụi",
-        image1: "assets/images/bao-tram.png",
-        avatar: "assets/images/bao-tram-small.png"
-    },
-    {
-        name1: "Lê Huỳnh Chí Nhân",
-        role1: "Chủ Hụi",
-        image1: "assets/images/chi-nhan.png",
-        avatar: "assets/images/chi-nhan-small.png"
-    },
-    {
-        name1: "Nguyễn Huỳnh Thất",
-        role1: "Chủ Hụi",
-        image1: "assets/images/huynh-that.png",
-        avatar: "assets/images/huynh-that-small.png"
-    },
-    {name1: "Nguyễn Hoàng Lâm", role1: "Chủ Hụi", image1: "assets/images/hoang-lam.png", avatar: "assets/images/hoang-lam-small.png"},
-];
-
-let listComment = [
-    {line1: "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.", name: "Lê Thị Mỹ Hoa", role: "Thành viên hội", img: "assets/images/bao-tram-small.png"},
-    {line1: "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.", name: "Lê Thị Mỹ Hoa", role: "Thành viên hội", img: "assets/images/bao-tram-small.png"},
-    {line1: "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.", name: "Lê Thị Mỹ Hoa", role: "Thành viên hội", img: "assets/images/bao-tram-small.png"},
-    {line1: "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.", name: "Lê Thị Mỹ Hoa", role: "Thành viên hội", img: "assets/images/bao-tram-small.png"},
-    {line1: "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.", name: "Lê Thị Mỹ Hoa", role: "Thành viên hội", img: "assets/images/bao-tram-small.png"},
-    {line1: "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.", name: "Lê Thị Mỹ Hoa", role: "Thành viên hội", img: "assets/images/bao-tram-small.png"},
-]
 
 
+async function loadOwners() {
+    try {
+        const response = await fetch('json/list-owners.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const owners = await response.json();
+        getListOwners(owners);
+    } catch (error) {
+        console.error('There has been a problem with your fetch operation:', error);
+    }
+}
 
-getListOwners(listOfOwners1);
+function getListOwners(listOfOwners) {
+    var list = document.getElementById('owners');
 
-getListComment(listComment);
+    list.innerHTML = '';
 
-function getListOwners() {
-    var list = document.getElementById('owners')
-
-    for (let item of listOfOwners1) {
+    for (let item of listOfOwners) {
         var div = `<div class=" ownerr"><div class="member-chuhui">
                             <img  class="img-chu-hui" src="${item.image1}">
                             <div class="d-flex">
@@ -228,32 +184,31 @@ function getListOwners() {
           
                                  </div>
                             </div>
-                        </div></div>`
-        list.innerHTML += div
+                        </div></div>`;
+        list.innerHTML += div;
     }
 }
 
-// script.js
+document.addEventListener('DOMContentLoaded', loadOwners);
 
-// Hàm tải danh sách gợi ý từ file JSON
+
 async function loadSuggestions() {
     try {
-        const response = await fetch('json/list-suggest.json'); // Đảm bảo đường dẫn đúng
+        const response = await fetch('json/list-suggest.json');
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
         const suggestions = await response.json();
-        getListSuggest(suggestions); // Truyền dữ liệu vào hàm getListSuggest
+        getListSuggest(suggestions);
     } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
 }
 
-// Hàm hiển thị danh sách gợi ý
 function getListSuggest(listSuggest) {
     var list = document.getElementById('suggest');
 
-    list.innerHTML = ''; // Xóa nội dung cũ nếu có
+    list.innerHTML = '';
 
     for (let item of listSuggest) {
         var div = `<div class="swiper-slide">
@@ -283,7 +238,6 @@ function getListSuggest(listSuggest) {
         list.innerHTML += div;
     }
 
-    // Khởi tạo Swiper sau khi đã thêm dữ liệu HTML
     var cardSlider = new Swiper(".card-slider", {
         autoplay: {
             delay: 4000,
@@ -297,7 +251,7 @@ function getListSuggest(listSuggest) {
         slidesPerView: 3,
         spaceBetween: 70,
         breakpoints: {
-            767: {
+            430: {
                 slidesPerView: 1,
             },
             1023: {
@@ -310,10 +264,7 @@ function getListSuggest(listSuggest) {
     });
 }
 
-// Gọi hàm loadSuggestions khi tài liệu đã tải xong
 document.addEventListener('DOMContentLoaded', loadSuggestions);
-
-
 
 async function loadMembers() {
     try {
@@ -376,8 +327,23 @@ function getListJoinMember(listJoinMember) {
 document.addEventListener('DOMContentLoaded', loadMembers);
 
 
-function getListComment() {
-    var list = document.getElementById('comment')
+async function loadComments() {
+    try {
+        const response = await fetch('json/list-comment.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const comments = await response.json();
+        getListComment(comments);
+    } catch (error) {
+        console.error('There has been a problem with your fetch operation:', error);
+    }
+}
+
+function getListComment(listComment) {
+    var list = document.getElementById('comment');
+
+    list.innerHTML = '';
 
     for (let item of listComment) {
         var div = `<div class="swiper-slide">
@@ -400,9 +366,10 @@ function getListComment() {
                                     </div>
                                 </div>
                             </div>
-                        </div> <!-- end of swiper-slide -->`
-        list.innerHTML += div
+                        </div>`;
+        list.innerHTML += div;
     }
+
     var cardSlider = new Swiper(".card-slider", {
         autoplay: {
             delay: 4000,
@@ -418,22 +385,23 @@ function getListComment() {
             prevEl: ".swiper-button-prev",
         },
         slidesPerView: 3,
-        // direction: getDirection(),
         spaceBetween: 70,
         breakpoints: {
-            // when window is <= 767px
-            767: {
+            430: {
                 slidesPerView: 1,
             },
-            // when window is <= 991px
-            1024: {
+            1023: {
                 slidesPerView: 2,
-                spaceBetween: 40,
             },
+            1200: {
+                slidesPerView: 3,
+            }
         },
-
     });
-};
+}
+
+document.addEventListener('DOMContentLoaded', loadComments);
+
 
 var allowRedirect = true;
 

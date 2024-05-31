@@ -829,6 +829,9 @@ input::placeholder {
 		width: 22px;
 		background-size: 22px 34px;
 	}
+	#owners .ownerr:nth-child(n+5) {
+		display: none;
+	}
 
 }
 
@@ -989,5 +992,8 @@ input::placeholder {
 
 	.hidden-tablet {
 		display: block;
+	}
+	#owners .ownerr:nth-child(n+5) {
+		display: none;
 	}
 }
